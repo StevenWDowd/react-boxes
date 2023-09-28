@@ -10,9 +10,9 @@ function NewBoxForm({addBox}){
   const [formData, setFormData] = useState(initialState);
 
   function handleChange(evt){
-    const { fieldName, value } = evt.target;
+    const { name, value } = evt.target;
     setFormData(currData => {
-      currData[fieldName] = value;
+      currData[name] = value;
       return {...currData};
     });
 
