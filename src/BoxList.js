@@ -15,7 +15,7 @@ function BoxList(){
 
   function deleteBox(evt) {
     const box = evt.target.parentNode;
-    console.log("BOX IS!!!!!!", box);
+    console.log("BOX IS!!!!!!", box.id);
     setBoxes(boxes.filter(b => b.id !== box.id));
   }
 
@@ -24,6 +24,7 @@ function BoxList(){
       <div>
         {boxes.map(box => (
           <Box key={box.id}
+              id={box.id}
               height={box.height}
               width={box.width}
               color={box.color}
